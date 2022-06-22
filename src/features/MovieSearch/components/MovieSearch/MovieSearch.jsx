@@ -16,7 +16,7 @@ const SubmitButton = styled.button`
 
 const MovieSearch = ({ setMovie }) => {
   const [movieName, setMovieName] = useState("");
-  const apiKey = "bb5872cb";
+  const apiKey = "3159865b";
 
   const getMoviesByName = async (name) => {
     const url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${name}`;
