@@ -12,7 +12,9 @@ const MoviesProvider = ({children}) => {
     }
 
     const removeMovie = (movieTitle) => {
-        setMovies(movies.filter(movie => movie.title !== movieTitle));
+        const newArr = movies.filter(movie => movie.Title !== movieTitle);
+        localStorage.setItem('movies', JSON.stringify(newArr));
+        setMovies(newArr);
         return movies;
     }
 

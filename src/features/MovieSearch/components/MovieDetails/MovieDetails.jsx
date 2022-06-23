@@ -17,7 +17,7 @@ const Content = styled.section`
   }
 `
 
-const MovieDetails = ({ Title, Year, imdbID, Type, Poster, Plot, Actors }) => {
+const MovieDetails = ({ Title, Year, imdbID, Type, Poster, Plot, Actors, favorites }) => {
   const { addMovie, movies } = useMovies();
 
 const addMovieWithCheck = (movie) => {
@@ -30,16 +30,16 @@ const addMovieWithCheck = (movie) => {
 
   return (
     <Container className="details-container">
-      <img src={Poster} alt={`${Title} poster.`} />
-      <Content>
-        <h1>{Title}</h1>
-        <h2>Year: {Year}</h2>
-        <h2>IMDB ID: {imdbID}</h2>
-        <p>Plot: {Plot}</p>
-        <p>Actors: {Actors}</p>
-        <button
-        onClick={() => addMovieWithCheck({Title, Year, Actors })}>Add to favorites</button>
-      </Content>
+        <img src={Poster} alt={`${Title} poster.`} />
+        <Content>
+          <h1>{Title}</h1>
+          <h2>Year: {Year}</h2>
+          <h2>IMDB ID: {imdbID}</h2>
+          <p>Plot: {Plot}</p>
+          <p>Actors: {Actors}</p>
+          <button
+          onClick={() => addMovieWithCheck({Title, Year, Actors })}>Add to favorites</button>
+        </Content>
     </Container>
   );
 };

@@ -3,20 +3,21 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const SubmitButton = styled.button`
-  background-color: dodgerblue;
-  border: none;
+  background-color: purple;
+  border: ;
   color: white;
   padding: 10px;
   border-radius: 12px;
 
+
   &:hover {
-    background-color: #054cda;
+    background-color: pink;
   }
 `
 
 const MovieSearch = ({ setMovie }) => {
   const [movieName, setMovieName] = useState("");
-  const apiKey = "3159865b";
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   const getMoviesByName = async (name) => {
     const url = `http://www.omdbapi.com/?apikey=${apiKey}&t=${name}`;

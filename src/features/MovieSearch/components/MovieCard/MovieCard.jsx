@@ -2,7 +2,7 @@ import React from "react";
 import MovieDetails from "../MovieDetails/MovieDetails";
 import "./styles.css";
 
-const MovieCard = ({ movieData }) => {
+const MovieCard = ({ movieData, favorites }) => {
   return (
     <div>
       {movieData && (

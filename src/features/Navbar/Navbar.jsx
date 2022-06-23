@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: #fcee9a;
+  background-color: lightblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
