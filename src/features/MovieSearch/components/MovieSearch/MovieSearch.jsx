@@ -17,7 +17,7 @@ const SubmitButton = styled.button`
 
 const MovieSearch = ({ setMovie }) => {
   const [movieName, setMovieName] = useState("");
-  const apiKey ="3159865b.REACT_APP_API_KEY";
+  const apiKey ="3159865b";
   //process.env.REACT_APP_API_KEY; put back in line 20 and take out id number
 
   const getMoviesByName = async (name) => {
