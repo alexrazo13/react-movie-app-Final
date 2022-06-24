@@ -21,13 +21,13 @@ const MovieSearch = ({ setMovie }) => {
   //process.env.REACT_APP_API_KEY; put back in line 20 and take out id number
 
   const getMoviesByName = async (name) => {
-    const url = `www.omdbapi.com/?apikey=${apiKey}&t=${name}`;
+    const url = `//www.omdbapi.com/?apikey=${apiKey}&t=${name}`;
     const response = await axios.get(url);
     setMovie(response.data);
   };
 
   const getMoviesById = async (id) => {
-    const url = `www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
+    const url = `//www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
     const response = await axios.get(url);
     setMovie(response.data);
   };
