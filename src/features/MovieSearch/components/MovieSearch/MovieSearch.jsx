@@ -27,7 +27,7 @@ const MovieSearch = ({ setMovie }) => {
   };
 
   const getMoviesById = async (id) => {
-    const url = `//www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
+    const url = `www.omdbapi.com/?apikey=${apiKey}&i=${id}`;
     const response = await axios.get(url);
     setMovie(response.data);
   };
